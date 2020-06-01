@@ -1,0 +1,29 @@
+{
+    "name": "john-jun/annotation",
+	"description": "A simple Annotation parser",
+    "keywords": ["Air", "Annotation", "Annotation Parser"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "John",
+            "email": "53950451@qq.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "doctrine/annotations": "^1.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Air\\Annotation\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Air\\Annotation\\Test\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    }
+}
