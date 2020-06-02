@@ -43,8 +43,7 @@ final class Tokenizer
                         case $node instanceof Class_:
                             $parseClass = new ParseClass(
                                 $namespace . '\\' . $node->name,
-                                'class',
-                                $node->isAbstract()
+                                $node->isAbstract() ? 'abstract' : 'class'
                             );
                             break;
 

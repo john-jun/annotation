@@ -19,21 +19,14 @@ final class ParseClass
     private $class;
 
     /**
-     * @var bool
-     */
-    private $abstract;
-
-    /**
      * ParseClass constructor.
      * @param string $class
      * @param string $type
-     * @param bool $abstract
      */
-    public function __construct(string $class, string $type, bool $abstract = false)
+    public function __construct(string $class, string $type)
     {
         $this->type = $type;
         $this->class = $class;
-        $this->abstract = $abstract;
     }
 
     /**
@@ -52,6 +45,11 @@ final class ParseClass
         return $this->type;
     }
 
+    public function isClass(): bool
+    {
+        return $this->getClassType() === 'class';
+    }
+
     /**
      * @return bool
      */
@@ -65,7 +63,7 @@ final class ParseClass
      */
     public function isAbstract(): bool
     {
-        return $this->abstract;
+        return $this->getClassType() === 'abstract';
     }
 
     /**
