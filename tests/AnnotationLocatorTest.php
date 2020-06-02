@@ -9,10 +9,10 @@ class AnnotationLocatorTest extends TestCase
 {
     public function testAnnotation()
     {
-        $Annotation = new AnnotationLocator(new Scanner(['E:\air\annotation\tests\Route']));
+        $Annotation = new AnnotationLocator(new Scanner(['E:\air\annotation\src', 'E:\air\annotation\tests']));
 
 
-        foreach ($Annotation->findClasses(Route::class) as $class) {
+        foreach ($Annotation->findClasses(RouteMapping::class) as $class) {
             var_dump($class->getClass());
             var_dump($class->getAnnotation());
         }

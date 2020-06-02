@@ -5,7 +5,7 @@ namespace Air\Annotation\Test;
 /**
  * @Annotation
  */
-class Route
+class RouteMapping
 {
     private $id;
 
