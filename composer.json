@@ -11,7 +11,13 @@
     ],
     "require": {
         "php": "^7.1",
-        "doctrine/annotations": "^1.7"
+        "doctrine/annotations": "^1.7",
+        "symfony/finder": "^5.1",
+        "nikic/php-parser": "^4.4",
+        "psr/log": "^1.1"
+    },
+    "scripts": {
+        "test": "phpunit --colors=always"
     },
     "autoload": {
         "psr-4": {
