@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
-namespace Air\Annotation\Locator;
+namespace Air\Annotation\Scanner;
 
 /**
  * Interface ParseClassInterface
  * @package Air\Annotation
  */
-final class ParseClass
+final class ClassName
 {
     /**
      * @var string

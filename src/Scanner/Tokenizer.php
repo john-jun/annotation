@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace Air\Annotation\Locator;
+namespace Air\Annotation\Scanner;
 
 use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\Interface_;
@@ -30,9 +30,9 @@ final class Tokenizer
 
     /**
      * @param string $code
-     * @return ParseClass|null
+     * @return ClassName|null
      */
-    public function parseClass(string $code): ?ParseClass
+    public function parseClass(string $code): ?ClassName
     {
         foreach ($this->parser->parse($code) as $stmt) {
             if ($stmt instanceof Namespace_ && $stmt->name) {
@@ -41,21 +41,21 @@ final class Tokenizer
 
                     switch (true) {
                         case $node instanceof Class_:
-                            $parseClass = new ParseClass(
+                            $parseClass = new ClassName(
                                 $namespace . '\\' . $node->name,
                                 $node->isAbstract() ? 'abstract' : 'class'
                             );
                             break;
 
                         case $node instanceof Trait_:
-                            $parseClass = new ParseClass(
+                            $parseClass = new ClassName(
                                 $namespace . '\\' . $node->name,
                                 'trait'
                             );
                             break;
 
                         case $node instanceof Interface_:
-                            $parseClass = new ParseClass(
+                            $parseClass = new ClassName(
                                 $namespace . '\\' . $node->name,
                                 'interface'
                             );
