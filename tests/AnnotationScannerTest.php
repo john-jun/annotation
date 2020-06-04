@@ -16,7 +16,7 @@ class AnnotationScannerTest extends TestCase
 
         print_r($annotation->getAnnotatedEntities());
 
-        foreach ($annotation->findClasses(AnnotationTrait::class) as $class) {
+        foreach ($annotation->getUseAnnotationClasses(Route::class) as $class) {
             echo PHP_EOL;
             var_dump($class);
         }

@@ -99,7 +99,7 @@ final class AnnotationScanner
      * @param string $annotation
      * @return Generator
      */
-    public function findClasses(string $annotation)
+    public function getUseAnnotationClasses(string $annotation)
     {
         return $this->getTargeted($annotation);
     }

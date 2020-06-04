@@ -7,7 +7,7 @@ use Air\Annotation\Test\Annotation\Route;
  * Class Get
  * @package Air\Annotation\Test\Annotation\Route
  *
- * @Route(id=123111231313213213213213132)
+ * @Route(id="prefix")
  */
 class Get
 {
