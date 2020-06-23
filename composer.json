@@ -14,7 +14,8 @@
         "doctrine/annotations": "^1.7",
         "symfony/finder": "^5.1",
         "nikic/php-parser": "^4.4",
-        "psr/log": "^1.1"
+        "psr/log": "^1.1",
+        "roave/better-reflection": "^4.6"
     },
     "scripts": {
         "test": "phpunit --colors=always"

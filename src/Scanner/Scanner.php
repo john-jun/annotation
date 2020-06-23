@@ -45,7 +45,7 @@ final class Scanner
                     continue;
                 }
             } catch (Throwable $e) {
-                $this->exceptions[spl_object_hash($e)] = $e;
+                $this->exceptions[] = $e;
 
                 continue;
             }
